@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 .grid {
   inline-size: 90%;
   margin-inline: auto;
@@ -27,7 +29,7 @@
 :root {
   --htmlFontSize: 100%;
 
-  --bodyBackgroundColor: #2c3338;
+  --bodyBackgroundColor: #084c61;
   --bodyColor: var(--baseColor);
   --bodyFontFamily: "Open Sans";
   --bodyFontFamilyFallback: sans-serif;
@@ -45,8 +47,15 @@ html {
   font-size: var(--htmlFontSize);
 }
 
+h2 {
+  letter-spacing: 2px;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  background-color: #333333;
+  background-color: #084c61;
   color: #fcfaf9;
   font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
   font-size: var(--bodyFontSize);
@@ -124,16 +133,11 @@ input[type="submit"] {
 
 :root {
   --loginBorderRadus: 0.25rem;
-  --loginColor: #fcfaf9;
-
-  --loginInputBackgroundColor: #48e5c2;
-  --loginInputHoverBackgroundColor: #05b38d;
-
-  --loginLabelBackgroundColor: #48e5c2;
-
-  --loginSubmitBackgroundColor: #ea4c88;
-  --loginSubmitColor: #fcfaf9;
-  --loginSubmitHoverBackgroundColor: #d44179;
+  --loginColor: #333;
+  --loginInputBackgroundColor: #ffc857;
+  --loginInputHoverBackgroundColor: #f5b32e;
+  --loginLabelBackgroundColor: #ffc857;
+  --loginSubmitColor: #333;
 }
 
 textarea,
@@ -153,29 +157,61 @@ select {
   border-top-left-radius: 0;
 }
 
+select:hover {
+  background-color: var(--loginInputHoverBackgroundColor);
+}
+
 textarea:focus,
 textarea:hover {
   background-color: var(--loginInputHoverBackgroundColor);
 }
 
 input[type="submit"] {
-  background-color: #48e5c2;
+  background-color: #ffc857;
   color: var(--loginSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
+  transition: 0.1s ease;
 }
 
 input[type="submit"]:focus,
 input[type="submit"]:hover {
-  background-color: #15816a;
+  scale: 1.05;
 }
 
-p {
-  margin-block: 1.5rem;
+#Text {
   text-align: center;
+  transform: translateY(7rem);
+  font-family: "Courier Prime", monospace;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+
+#loadingText {
+  text-align: center;
+  font-weight: 500;
+  font-family: "Courier Prime", monospace;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+option {
+  color: #333;
+}
+
+select {
+  color: #333;
+}
+
+textarea {
+  color: #333;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #333;
+  opacity: 0.5;
 }
